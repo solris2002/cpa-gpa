@@ -58,13 +58,13 @@ st.sidebar.subheader("Cài đặt đầu vào")
 
 student_type = st.sidebar.selectbox("Định hướng sinh viên", ("Cử nhân", "Kỹ sư"))
 max_semester = 6 if student_type == "Cử nhân" else 8
-current_semester = st.sidebar.selectbox("Kỳ hiện tại", list(range(1, max_semester + 1)))
+current_semester = st.sidebar.selectbox("Kỳ đã học", list(range(1, max_semester + 1)))
 
 st.sidebar.divider()
 st.sidebar.markdown(
     """
 **Hướng dẫn nhanh**
-- Chọn *Định hướng sinh viên* và *Kỳ hiện tại* ở trên.
+- Chọn *Định hướng sinh viên* và *Kỳ đã học* ở trên.
 - Nhập **GPA** và **Tín chỉ** cho từng kỳ đã học.
 - Nhấn **Dự đoán** để xem *CPA tốt nghiệp* và *GPA kỳ kế tiếp* (nếu còn kỳ).
 
@@ -185,3 +185,4 @@ if current_semester < max_semester:
         st.error(str(e))
     except Exception as e:
         st.error(f"Đã xảy ra lỗi lúc dự đoán GPA kỳ tiếp theo: {e}")
+
