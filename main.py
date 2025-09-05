@@ -4,7 +4,14 @@ import joblib
 from pathlib import Path
 
 # =============== PAGE LAYOUT ===============
-st.set_page_config(page_title="Dự đoán kết quả học tập", layout="wide")
+# st.set_page_config(page_title="Dự đoán kết quả học tập", layout="wide")
+
+st.set_page_config(
+    page_title="Dự đoán kết quả học tập",
+    page_icon="imgs/favico.png",  # đường dẫn tới ảnh/icon
+    layout="wide"
+)
+
 st.markdown("""
     <style>
       .block-container { padding-left: 2rem; padding-right: 2rem; }
