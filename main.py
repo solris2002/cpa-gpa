@@ -61,6 +61,17 @@ def parse_tc(raw: str):
         return None, "Tín chỉ không phải là số nguyên hợp lệ"
 
 # =============== SIDEBAR ===============
+st.sidebar.markdown(
+    """
+    <a href="https://solris2002.github.io/home-seee-grade/" target="_self">
+        <button style="padding:0.5em 1em; border-radius:8px; border:none;
+                       background-color:#00000; color:black; font-size:16px;">
+            << Quay lại trang chủ
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
 st.sidebar.subheader("Cài đặt đầu vào")
 
 student_type = st.sidebar.selectbox("Định hướng sinh viên", ("Cử nhân", "Kỹ sư"))
